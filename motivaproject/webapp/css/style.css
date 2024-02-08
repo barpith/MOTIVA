@@ -1,0 +1,12 @@
+/* Enter your custom styles here */
+.table2 .sapMColumnHeader .sapMText{
+    color: red;
+    font-weight: bolder;
+}
+.table3 .sapMColumnHeader .sapMText{
+    font-weight: bolder;
+}
+#container-com.sap.mot.tax.recon.motivaproject---View1--text1 {
+    color: blue;
+    font-weight: bold;
+}
