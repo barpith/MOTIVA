@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","com/sap/mot/tax/recon/motivaproject/model/models"],function(e,t,o){"use strict";return e.extend("com.sap.mot.tax.recon.motivaproject.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(o.createDeviceModel(),"device")}})});
+//# sourceMappingURL=Component.js.map

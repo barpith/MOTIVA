@@ -1,0 +1,490 @@
+<mvc:View controllerName="com.sap.mot.tax.recon.motivaproject.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel id="_panel1" visible="true">
+                    <Table id="idProductsTable" inset="false" items="{oModel>/data}">
+                        <columns>
+                            <Column id="_IDGenColumn1">
+                                <Text id="_IDGenText1" text="Status"/>
+                            </Column>
+                            <Column id="_IDGenColumn2">
+                                <Text id="_IDGenText2" text="Operator"/>
+                            </Column>
+                            <Column id="_IDGenColumn3">
+                                <Text id="_IDGenText3" text="Case ID"/>
+                            </Column>
+                            <Column id="_IDGenColumn4">
+                                <Text id="_IDGenText4" text="Filing State"/>
+                            </Column>
+                            <Column id="_IDGenColumn5">
+                                <Text id="_IDGenText5" text="Filing Code"/>
+                            </Column>
+                            <Column id="_IDGenColumn6">
+                                <Text id="_IDGenText6" text="Filing Name"/>
+                            </Column>
+                            <Column id="_IDGenColumn7">
+                                <Text id="_IDGenText7" text="Tax Period"/>
+                            </Column>
+                            <Column id="_IDGenColumn8">
+                                <Text id="_IDGenText8" text="Date Created"/>
+                            </Column>
+                            <Column id="_IDGenColumn9">
+                                <Text id="_IDGenText9" text="Due Date"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle" type="Active" press="handlePress">
+                                <cells>
+                                    <Text id="_IDGenText10" text="{oModel>status}"/>
+                                    <Text id="_IDGenText11" text="{oModel>operator}"/>
+                                    <Text id="_IDGenText12" text="{oModel>caseId}"/>
+                                    <Text id="_IDGenText13" text="{oModel>filingState}"/>
+                                    <Text id="_IDGenText14" text="{oModel>filingCode}"/>
+                                    <Text id="_IDGenText15" text="{oModel>filingName}"/>
+                                    <Text id="_IDGenText16" text="{oModel>taxPeriod}"/>
+                                    <Text id="_IDGenText17" text="{oModel>dateCreated}"/>
+                                    <Text id="_IDGenText18" text="{oModel>dueDate}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+            </Panel>
+            <Panel id="_panel2" visible="false">
+                <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+                    <items>
+                        <IconTabFilter id="_IDGenIconTabFilter1" text="Point Sheet" key="pointSheet">
+                            <f:SimpleForm id="SimpleFormDisplay480_Trial" editable="false" singleContainerFullSize="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="4" columnsM="4">
+                                <f:content>
+                                    <core:Title id="_IDGenTitle1"/>
+                                    <Label id="_IDGenLabel1" text="Filing Type"/>
+                                    <Text id="_IDGenText19" text="TX" />
+                                    <core:Title id="_IDGenTitle2"/>
+                                    <Label id="_IDGenLabel2" text="Tax Period"/>
+                                    <Text id="_IDGenText20" text="Dec-23"/>
+                                    <core:Title id="_IDGenTitle3"/>
+                                    <Label id="_IDGenLabel3" text="Filing Code"/>
+                                    <Text id="_IDGenText21" text="TXMO102"/>
+                                    <core:Title id="_IDGenTitle4"/>
+                                    <Label id="_IDGenLabel4" text="Company Code"/>
+                                    <Text id="_IDGenText22" text="USK7"/>
+                                </f:content>
+                            </f:SimpleForm>
+                            <f:SimpleForm id="SimpleFormDisplay480_Trial_copy" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" columnsL="2" columnsM="2" singleContainerFullSize="false">
+                                <f:content>
+                                    <CheckBox id="_IDGenCheckBox1" selected="true"/>
+                                    <MultiInput width="100%" id="multiInput" valueHelpRequest="handleValueHelp">
+                                    </MultiInput>                                
+                                </f:content>
+                            </f:SimpleForm>
+                            <f:SimpleForm id="SimpleFormDisplay480_Trial_opy" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" columnsL="2" columnsM="2" singleContainerFullSize="false">
+                                <f:content>
+                                    <CheckBox id="_IDGenCheckBox2" selected="false"/>
+                                    <MultiInput width="100%" id="multiInput1" valueHelpRequest="handleValueHelp">
+                                    </MultiInput>
+                                </f:content>
+                            </f:SimpleForm>
+                            <f:SimpleForm id="SimpleFormDisplay480_Trial_opy1" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" columnsL="2" columnsM="2" singleContainerFullSize="false">
+                                <f:content>
+                                    <CheckBox id="_IDGenCheckBox3" selected="false"/>
+                                    <MultiInput width="100%" id="multiInput2" valueHelpRequest="handleValueHelp">
+                                    </MultiInput>
+                                </f:content>
+                            </f:SimpleForm>
+                        </IconTabFilter>
+                        <IconTabFilter id="_IDGenIconTabFilter2" text="CW" key="CW">
+                            <Table id="table3">
+                                <columns>
+                                    <Column id="_IDGenColumn20" width="40%"/>
+                                    <Column id="_IDGenColumn21" width="5%"/>
+                                    <Column id="_columns1" width="10%">
+                                        <Text text="Gasoline" id="_col31"/>
+                                    </Column>
+                                    <Column id="_IDGenColumn12" width="30%"/>
+                                </columns>
+                                <items>
+                                    <ColumnListItem id="_IDGenColumnListItem113">
+                                        <cells>
+                                            <Text text="" id="_blank"/>
+                                            <Text id="_rate" text="Rate"/>
+                                            <Input id="_IDGenInput3" value="0.27" liveChange="handleRateChange"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                            <Table id="table2">
+                                <columns>
+                                    <Column id="_IDGenColumn10" width="33%"/>
+                                    <Column id="_columns" width="33%">
+                                        <Text text="Gallons" id="_gallon"/>
+                                    </Column>
+                                    <Column id="_IDGenColumn11" width="33%">
+                                        <Text text="Dollars" id="_dollar"/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem id="_IDGenColumnListItem2">
+                                        <cells>
+                                            <Text text="General Ledger / Accruals" id="text1"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem3">
+                                        <cells>
+                                            <Text text="Sales" id="text2" textAlign="Right"/>
+                                            <Text text="{value:'-3646912',type:'sap.ui.model.type.Float'}" id="text3"/>
+                                            <Input id="_IDGenInput1" value="{value:'-948197.00',type:'sap.ui.model.type.Float'}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem4">
+                                        <cells>
+                                            <Text text="Purchase" id="text4"/>
+                                            <Text id="_IDGenText23" text="200,208"/>
+                                            <Input id="_IDGenInput2" value="{value:'52054.00',type:'sap.ui.model.type.Float'}"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem5">
+                                        <cells>
+                                            <Text text="Current Month Accruals" id="text5"/>
+                                            <Text text="-3,446,704" id="text6"/>
+                                            <Text text="$-896,143.00" id="text7"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem7">
+                                        <cells>
+                                            <Text text="ADJUSTMENTS" id="text812"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem8">
+                                        <cells>
+                                            <Button text="Add Adjustment" type="Default" id="text9" press="addAdjustment"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem9">
+                                        <cells>
+                                            <Text text="Correction from Prior Period" id="text10"/>
+                                            <Text text="200" id="text11"/>
+                                            <Text text="100.00" id="text12"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem10">
+                                        <cells>
+                                            <Text text="TOTAL RECONCILING ITEMS" id="text13"/>
+                                            <Text text="385" id="text14"/>
+                                            <Text text="$100.00" id="text15"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem11">
+                                        <cells>
+                                            <Text text="ADJUSTED TAX DUE" id="text16"/>
+                                            <Text text="-3,447,088" id="text17"/>
+                                            <Text text="$-896,243.00" id="text18"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem12">
+                                        <cells>
+                                            <Text text="Gross Tax Payment (Before Discount)" id="text19"/>
+                                            <Text text="-3,447,088" id="text20"/>
+                                            <Text text="$-896,243.00" id="text21"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem13">
+                                        <cells>
+                                            <Text text="Collection Allowance" id="text41"/>
+                                            <Text id="_IDGenText232" text="0"/>
+                                            <Input id="_IDGenInput22" value="0.00"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem14">
+                                        <cells>
+                                            <Text text="Discounts" id="text42"/>
+                                            <Text id="_IDGenText233" text="0"/>
+                                            <Input id="_IDGenInput23" value="0.00"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem15">
+                                        <cells>
+                                            <Text text="Credit Card" id="text43"/>
+                                            <Text id="_IDGenText234" text="0"/>
+                                            <Input id="_IDGenInput24" value="0.00"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem16">
+                                        <cells>
+                                            <Text text="NET TAX PAYMENT FROM Avalara Return" id="text44"/>
+                                            <Text id="_IDGenText235" text="0"/>
+                                            <Input id="_IDGenInput25" value="{value:'0.00',type:'sap.ui.model.type.Float'}" liveChange="handleTaxPay"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem17">
+                                        <cells>
+                                            <Text text="Misc. Rounding" id="text45"/>
+                                            <Text id="_IDGenText236" text="0"/>
+                                            <Input id="_IDGenInput26" value="0.00"/>
+                                        </cells> 
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem18">
+                                        <cells>
+                                            <Text text="GROSS TAX DUE" id="text46"/>
+                                            <Text id="_IDGenText237" text="0"/>
+                                            <Input id="_IDGenInput27" value="0.00"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem id="_IDGenColumnListItem19">
+                                        <cells>
+                                            <Text text="UNRECONCILED AMOUNT" id="text47"/>
+                                            <Text id="_IDGenText238" text="{value:'-3447088',type:'sap.ui.model.type.Float'}"/>
+                                            <Text id="_IDGenInput28" text="$-896,243.00"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </IconTabFilter>
+                        <IconTabFilter id="_IDGenIconTabFilter3" text="RA Accrual" key="RA Accrual">
+                            <Text id="_IDGenText213" text="In Progress...."/>
+                        </IconTabFilter>
+                        <IconTabFilter id="_IDGenIconTabFilter4" text="GPRF" key="GPRF">
+                            <Text id="_IDGenText214" text="In Progress...."/>
+                        </IconTabFilter>
+                        <IconTabFilter id="_IDGenIconTabFilter5" text="Recon" key="Recon">
+                            <Text id="_IDGenText215" text="In Progress...."/>
+                        </IconTabFilter>
+                        <IconTabFilter id="_IDGenIconTabFilter6" text="Checklist" key="Checklist">
+                        <Panel id="Panel4">
+                            <f:SimpleForm id="SimpleFormDisplay480_Trial1" editable="false" singleContainerFullSize="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3" >
+                                <f:content>
+                                    <core:Title id="_IDGenTitle11"/>
+                                    <Label id="_IDGenLabel5" text=""/>
+                                    <Text id="_IDGenText212" text="Peer Review guidelines"/>
+                                    <Label id="_IDGenLabel6" text=""/>
+                                    <Text id="_IDGenText191" text="$0 - $1Min:All Compliance" />
+                                    <Label id="_IDGenLabel7" text=""/>
+                                    <Text id="_IDGenText1911" text="Greater than $1Min: Leadership or Senior Tax Accountant" />
+                                    <core:Title id="_IDGenTitle21"/>
+                                    <Label id="_IDGenLabel51" text=""/>
+                                    <Text id="_IDGenText2121" text="Filing Method:EDI"/>
+                                    <Label id="_IDGenLabel61" text=""/>
+                                    <Text id="_IDGenText1912" text="Payment Method: ACH" />
+                                    <core:Title id="_IDGenTitle31"/>
+                                    <Label id="_IDGenLabel52" text="Due date"/>
+                                    <Text id="_IDGenText2122" text="02/02/2024"/>
+                                    <Label id="_IDGenLabel62" text="Is return zero?"/>
+                                    <Select id="_IDGenSelect212" >
+                                        <core:Item id="_IDGenItem12" key="" text="" />
+                                        <core:Item id="_IDGenItem22" key="1" text="YES" />
+                                        <core:Item id="_IDGenItem32" key="2" text="NO" />
+                                    </Select>
+                                </f:content>
+                            </f:SimpleForm>
+                            <!-- <f:SimpleForm id="SimpleFormDisplay480_Trial2" editable="false" singleContainerFullSize="false" layout="ResponsiveGridLayout" labelSpanXL="0" labelSpanL="0" labelSpanM="0" labelSpanS="0" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" >
+                                <f:content>
+                                    <Text id="_IDGenText222" text="Preparer Name"/>
+                                    <Text id="_IDGenText223" text="Anoop Kodali"/>
+                                    <Text id="_IDGenText224" text="State and Return Name/Number"/>
+                                    <Text id="_IDGenText24" text="TX, FIL-123/SUPPLIER/PERMISSIVE SUPPLIER RETURN"/>
+                                    <Text id="_IDGenText25" text="Return Period"/>
+                                    <Text id="_IDGenText26" text="Dec-23"/>
+                                </f:content>
+
+                            </f:SimpleForm> -->
+                            <f:SimpleForm  editable="false" singleContainerFullSize="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3" >
+                                <f:content>
+                                    <core:Title/>
+                                    <Label text="Preparer Name"/>
+                                    <Text text="Anoop Kodali"/>
+                                    <Label text="State and Return Name/Number"/>
+                                    <Text text="TX, FIL-123/SUPPLIER/PERMISSIVE SUPPLIER RETURN" />
+                                    <Label text="Return Period"/>
+                                    <Text text="Dec-23" />
+                                </f:content>
+                        </f:SimpleForm>
+                        </Panel>
+                        <Panel>
+                            <Table id="idReturnsTable" inset="false">
+                        <columns>
+                            <Column id="retCol1" >
+                                <Text id="retText2" text="Prior Month" />
+                            </Column>
+                            <Column id="retCol2">
+                                <Text id="retText3" text="Current Month"/>
+                            </Column>
+                            <Column id="retCol3">
+                                <Text id="retText4" text="Variance (%)"/>
+                            </Column>
+                            <Column id="retCol4">
+                                <Text id="retText5" text="Variance (Qty or $)"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem id="retColList1" vAlign="Middle">
+                                <cells>
+                                    <Text id="_IDGenText101" text="Receipts - 0"/>
+                                    <Text id="_IDGenText111" text="Receipts - 0"/>
+                                    <Text id="_IDGenText121" text="0%"/>
+                                    <Text id="_IDGenText131" text="0"/>
+                                    
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem id="retColList2" vAlign="Middle">
+                                <cells>
+                                    <Text id="_IDGenText102" text="Disbursements - 0"/>
+                                    <Text id="_IDGenText112" text="Disbursements - 0"/>
+                                    <Text id="_IDGenText122" text="0%"/>
+                                    <Text id="_IDGenText132" text="0"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem id="retColList3" vAlign="Middle">
+                                <cells>
+                                    <Input id="_IDGenText103" value="0" name="Ending Inventory"/>
+                                    <Input id="_IDGenText113" value="0" name="Beginning Inventory"/>
+                                    <Text id="_IDGenText123" text="0.00%"/>
+                                    <Text id="_IDGenText133" text="0"/>
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem id="retColList4" vAlign="Middle">
+                                <cells>
+                                    <Text id="_IDGenText104" text="Payment-$0.00"/>
+                                    <Text id="_IDGenText114" text="Payment-$1,346,531.00"/>
+                                    <Text id="_IDGenText124" text="100.00%"/>
+                                    <Text id="_IDGenText134" text="$1,346,531.00"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                    </Panel>
+                    
+                    <Panel>
+                    <Table id="table4" inset="false">
+                        <columns>
+                            <Column id="QuesCol1" width="80%">
+                                <Text id="quesText1" text="PEGA: CONTROL WORKBOOK, RETURN, and SCHEDULE DATA" textAlign="Center"/>
+                            </Column>
+                            <Column id="QuesCol2">
+                                <Text id="quesText2" text="Yes"/>
+                            </Column>
+                            <Column id="QuesCol3">
+                                <Text id="quesText3" text="No"/>
+                            </Column>
+                            <Column id="QuesCol4">
+                                <Text id="quesText4" text="NA*"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text textAlign="Initial" text="Does Avalara pivot tie to the return face page? If no, STOP and inquire with the preparer."/>
+                                    <RadioButton id="RB2-1" groupName="group1"/>
+                                    <RadioButton id="RB2-2" groupName="group1"/>    
+                                    <RadioButton id="RB2-3" groupName="group1"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="Does the Beginning Inventory current month = Ending Inventory prior month? If no, STOP and inquire with the preparer."/>
+                                    <RadioButton id="RB3-1" groupName="group2"/>
+                                    <RadioButton id="RB3-2" groupName="group2"/>    
+                                    <RadioButton id="RB3-3" groupName="group2"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="If inventories are reported, is the Gain / Loss reasonable? (Hint: Gains in the winter, Losses in the summer)"/>
+                                    <RadioButton id="RB4-1" groupName="group3"/>
+                                    <RadioButton id="RB4-2" groupName="group3"/>    
+                                    <RadioButton id="RB4-3" groupName="group3"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="Reasonableness comparison of Disbursements and Receipts, current month versus prior month"/>
+                                    <RadioButton id="RB1-1" groupName="group4"/>
+                                    <RadioButton id="RB1-2" groupName="group4"/>    
+                                    <RadioButton id="RB1-3" groupName="group4"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="PAYMENT" id="id1"/>
+                                    <Text text="Yes" id="id2"/>
+                                    <Text text="No" id="id3"/>
+                                    <Text text="NA" id="id4"/>                                                                  
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="Confirm the GPRF (payment request form) = the tax return"/>
+                                    <RadioButton id="RB5-1" groupName="group5"/>
+                                    <RadioButton id="RB5-2" groupName="group5"/>    
+                                    <RadioButton id="RB5-3" groupName="group5"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="Confirm GPRF Due Date = Tax Return Due Date"/>
+                                    <RadioButton id="RB6-1" groupName="group6"/>
+                                    <RadioButton id="RB6-2" groupName="group6"/>    
+                                    <RadioButton id="RB6-3" groupName="group6"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="FINANCIAL IMPACTS" id="id5"/>
+                                    <Text text="Yes" id="id6"/>
+                                    <Text text="No" id="id7"/>
+                                    <Text text="NA" id="id8"/>                                                                  
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="When you reviewed the tax reconciliation did it appear complete and reasonable? Be sure you understand the facts and circumstances of the open item. Note any observations below:"/>
+                                    <RadioButton id="RB7-1" groupName="group7"/>
+                                    <RadioButton id="RB7-2" groupName="group7"/>    
+                                    <RadioButton id="RB7-3" groupName="group7"/>                                 
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="Is there a variance of 15% and $5Mln between the current and prior month tax payable? Note any observations below:"/>
+                                    <RadioButton id="RB8-1" groupName="group7"/>
+                                    <RadioButton id="RB8-2" groupName="group7"/>    
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                    <Text text="* NA could be dude to -0- activity and -0- remittance, no reportanle activity, no schedules required"/>
+                    </Panel>
+                    <Panel>
+                        <Text text="SAP Document Number"/>                        
+                    </Panel>
+                    <Panel>
+                        <Text text="Additional Reviewer Comments  "/>
+                        <TextArea value="" width="80%"/>
+                    </Panel>
+                    <Panel>
+                        <f:SimpleForm  editable="false" singleContainerFullSize="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3" >
+                                <f:content>
+                                    <core:Title/>
+                                    <Label text="Date Reviewed"/>
+                                    <Text text="11/28/2023"/>
+                                    <Label text="Reviewer Name"/>
+                                    <Text text="Arpith Bhat" />
+                                    <Label text=""/>
+                                    <Text text="Approved" />
+                                </f:content>
+                        </f:SimpleForm>
+                    </Panel>
+                        </IconTabFilter>
+                    </items>
+                </IconTabBar>    
+            </Panel>
+        </content>
+        <footer>
+            <Toolbar id="_IDGenToolbar1" >
+                <Button id="_cancel" type="Reject" press="onCancel" text="Cancel" visible="false"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_save" type="Emphasized" press="onSave" text="Save" visible="false"/>
+                <Button id="_submit" type="Accept" press="onSubmit" text="Submit" visible="false"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
